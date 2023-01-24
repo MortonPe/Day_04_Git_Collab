@@ -64,7 +64,21 @@ plt.ylabel("Water Level")
 # Michigan/Hurion Water Level vs Superior Water Level to see if there 
 # is any correlation between the water levels.
 
-mhu
+<<<<<<< HEAD
+=======
+
+# +
+sup_fl = pd.read_csv("sup.csv")
+mhu_fl = pd.read_csv("mhu.csv")
+
+mich_hur_lvl = mhu_fl.iloc[0:,1]
+sup_lvl = sup_fl.iloc[0:,1]
+
+plt.scatter(mich_hur_lvl, sup_lvl)
+plt.xlabel('Michigan_Huron Levels')
+plt.ylabel('Superior Levels')
+# -
+>>>>>>> vancamp
 
 # PART 6
 # Using the Michigan/Hurion and Erie Datasets, plot the 
