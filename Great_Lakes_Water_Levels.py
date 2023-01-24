@@ -14,13 +14,15 @@ time, you're welcome to do so.
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+# -
 
 
 # PART 1
 # Using the Michigan/Huron Dataset, plot the Water Level, the second 
 # column, as a function of time years
 
-
+data = pd.read_csv("mhu.csv")
+plt.plot(data['time'],data['lake average'])
 
 # PART 2
 # Using the Superior Dataset, plot the Water Level, the second column, 
@@ -32,7 +34,24 @@ import matplotlib.pyplot as plt
 # Using the Erie Dataset, plot the Water Level, the second column, 
 # as a function of time years
 
+# +
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
+erieData = pd.read_csv('eri.csv')
+#erieData
+
+xTime = erieData["time"]
+yWaterLevel = erieData["water level"]
+
+plt.plot(xTime, yWaterLevel)
+plt.title("Lake Erie Water Levels Each Year")
+plt.xlabel("Time")
+plt.ylabel("Water Level")
+
+
+# -
 
 # PART 4
 # Using the Ontario Dataset, plot the Water Level, the second column, 
@@ -45,14 +64,20 @@ import matplotlib.pyplot as plt
 # Michigan/Hurion Water Level vs Superior Water Level to see if there 
 # is any correlation between the water levels.
 
-
+mhu
 
 # PART 6
 # Using the Michigan/Hurion and Erie Datasets, plot the 
 # Michigan/Huron Water Level vs Erie Water Level to see if there is 
 # any correlation between the water levels.
 
-
+import pandas as pd
+import matplotlib.pyplot as plt
+mhu = pd.read_csv('mhu.csv')
+eri = pd.read_csv('eri.csv')
+mhu_level = mhu.iloc[0:,1]
+eri_level = eri.iloc[0:,1]
+plt.scatter(mhu_level, eri_level)
 
 
 # PART 7
