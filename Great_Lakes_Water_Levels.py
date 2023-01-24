@@ -1,4 +1,4 @@
-""""
+"""""
 To use this notebook for your in-class assignment, you will need these 
 files, which you shoujld have downloaded:
 * mhu.csv -- Lake Michigan and Lake Huron
@@ -10,7 +10,7 @@ As instructed in the in-class activity notebook for today, you are
 only expected to complete one PART below. Do not worry if your group 
 is not big enough to finish all parts below, but if you have extra 
 time, you're welcome to do so.
-""""
+"""""
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -54,9 +54,20 @@ import matplotlib.pyplot as plt
 
 
 
+
 # PART 7
-#Using the Superior and Ontario Datasets, plot the Superior Water 
+# Using the Superior and Ontario Datasets, plot the Superior Water 
 # Level vs Ontario Water Level to see if there is any correlation 
 # between the water levels.
+
+sup = pd.read_csv('sup.csv')
+ont = pd.read_csv('ont.csv')
+#plt.plot(sup,ont)
+x=sup['year']
+y=sup['lake levels']
+plt.plot(x,y)
+c=ont['year']
+v=ont['Lake Ontario annual averages']
+plt.plot(c,v)
 
 
