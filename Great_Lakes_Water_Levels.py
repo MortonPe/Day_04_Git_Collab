@@ -1,3 +1,4 @@
+# +
 """"
 To use this notebook for your in-class assignment, you will need these 
 files, which you shoujld have downloaded:
@@ -11,10 +12,14 @@ only expected to complete one PART below. Do not worry if your group
 is not big enough to finish all parts below, but if you have extra 
 time, you're welcome to do so.
 """"
+
+
+# -
+
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-
 
 # PART 1
 # Using the Michigan/Huron Dataset, plot the Water Level, the second 
@@ -38,7 +43,14 @@ import matplotlib.pyplot as plt
 # Using the Ontario Dataset, plot the Water Level, the second column, 
 # as a function of time years
 
-
+ont_data = pd.read_csv("ont.csv")
+time = ont_data['year']
+averages = ont_data['Lake Ontario annual averages']
+plt.plot(time,averages)
+plt.xlabel('Time (years)')
+plt.ylabel('Average water level')
+plt.title('Average Lake Ontatiro Water Levels Over Time')
+plt.tight_layout()
 
 # PART 5
 # Using the Michigan/Huron and Superior Datasets, plot the 
@@ -55,7 +67,7 @@ import matplotlib.pyplot as plt
 
 
 # PART 7
-#Using the Superior and Ontario Datasets, plot the Superior Water 
+# Using the Superior and Ontario Datasets, plot the Superior Water 
 # Level vs Ontario Water Level to see if there is any correlation 
 # between the water levels.
 
