@@ -66,14 +66,20 @@ plt.ylabel("Water Level")
 # Michigan/Hurion Water Level vs Superior Water Level to see if there 
 # is any correlation between the water levels.
 
-
+mhu
 
 # PART 6
 # Using the Michigan/Hurion and Erie Datasets, plot the 
 # Michigan/Huron Water Level vs Erie Water Level to see if there is 
 # any correlation between the water levels.
 
-
+import pandas as pd
+import matplotlib.pyplot as plt
+mhu = pd.read_csv('mhu.csv')
+eri = pd.read_csv('eri.csv')
+mhu_level = mhu.iloc[0:,1]
+eri_level = eri.iloc[0:,1]
+plt.scatter(mhu_level, eri_level)
 
 # PART 7
 # Using the Superior and Ontario Datasets, plot the Superior Water 
